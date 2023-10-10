@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 페이지 제목</title>
+    <style>
+        body {
+            background-color: #053805;
+            /* 더 진한 초록 */
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 0px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+
+        
+
+        .name-text {
+            font-size: 3.0em;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .img1 {
+            width: 200px;
+            background-color: white;
+            border-radius: 10px;
+            height: 100px;
+            position: fixed; /* 이미지의 위치를 고정시킴 */
+            left: 45%; /* 화면 왼쪽에서 50% 떨어진 위치에 정렬 */
+            margin-bottom: 20px;
+        }
+
+        .img2 {
+            width: 50px;
+            background-color: white;
+            border-radius: 10px;
+            height: 50px;
+            position: fixed; /* 이미지의 위치를 고정시킴 */
+            left: 15%; /* 화면 왼쪽에서 50% 떨어진 위치에 정렬 */
+        }
+
+        .img3 {
+            width: 190px;
+            background-color: white;
+            border-radius: 10px;
+            height: 200px;
+            position: fixed; /* 이미지의 위치를 고정시킴 */
+            left: 44%; /* 화면 왼쪽에서 50% 떨어진 위치에 정렬 */
+            margin-bottom: 20px;
+        }
+
+        .gpt-text {
+            background-color: rgb(27, 195, 150);
+            padding: 6px 20px;
+            border-radius: 10px;
+            width: 200px;
+            height: 150px;
+        }
+
+        .sme-text {
+            background-color: rgb(169, 165, 165);
+            padding: 6px 20px;
+            border-radius: 10px;
+            width: 200px;
+            height: 150px;
+        }
+
+        .small-name-text {
+            font-size: 1.5em;
+            margin: 20px 0;
+            padding: 10px;
+            margin-top: 240px;
+            margin-bottom: 50px;
+        }
+
+        .logo-placeholder {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .img {
+            display: inline-block;
+            margin-left: 350px;
+            margin-right: 10px;
+        }
+
+        .gpt-text {
+            display: inline-block;
+            width: 900px;
+            height: 120px;
+            margin-right: 60px;
+            margin-left: 50px;
+
+        }
+
+        .sme-text {
+            display: inline-block;
+            width: 900px;
+            height: 70px;
+            margin-right: 60px;
+            margin-left: 50px;
+
+        }
+
+        .gpt1 {
+            display: inline-block;
+            margin-top: 3px;
+            margin-bottom: 50px;
+        }
+
+        .image-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .rectangle-image {
+            width: 100px;
+            height: 70px;
+            max-width: 100%;
+            /* 이미지가 화면 크기를 초과하지 않도록 제한합니다 */
+            background-color: white;
+            display: block;
+        }
+
+        .recommend {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="recommend">
+        <h2>당신에게 어울리는 학과</h2>
+        <img class = img3 src="{{ url_for('static', filename=selected_department_English + '.png') }}">
+        <div class="small-name-text" name="selected_department">{{selected_department}}</div>
+        <div class="gpt1">
+            <img class = img2 src="{{ url_for('static', filename='gpt.png') }}">
+            <span class="gpt-text" name="gpt">{{gpt}}</span>
+
+        </div>
+        <div class="gpt2">
+            <img class = img2 src="{{ url_for('static', filename='SME_chat.png') }}">
+            <span class="sme-text" name="SME_text">{{SME_text}}</span>
+        </div>
+
+    </div>
+
+    <!-- ... 추가적인 텍스트를 넣으실 경우, 위와 같은 div를 복사하여 사용하세요. -->
+
+
+    <div class="image-container">
+        <div class="rectangle-image">
+            <img class = img1 src="{{ url_for('static', filename='SME.png') }}">
+        </div>
+    </div>
+</body>
+
+</html>

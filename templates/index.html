@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>시스템경영공학과 학생회 원스미</title>
+    <style>
+        html,
+        body {
+            background-color: #053805;
+            /* 더 진한 초록 */
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 0px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.7em;
+            padding-top: 20px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+
+        p1 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        .dropdown-container {
+            display: flex;
+            /* Flexbox를 사용하여 내부 요소를 정렬합니다 */
+            justify-content: space-between;
+            /* 요소 사이의 간격을 최대화하여 왼쪽과 오른쪽 정렬합니다 */
+            align-items: center;
+            /* 수직 정렬을 가운데로 맞춥니다 */
+        }
+
+        .dropdown-label1 {
+            flex: 1;
+            margin-left: 450px;
+            margin-bottom: 20px;
+            /* 레이블(span) 요소가 가능한 영역을 최대한 차지하도록 설정합니다 */
+        }
+
+        .dropdown-label2 {
+            flex: 1;
+            margin-left: 450px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            /* 레이블(span) 요소가 가능한 영역을 최대한 차지하도록 설정합니다 */
+        }
+
+        select {
+            text-align: right;
+            /* select 요소 내용을 오른쪽 정렬합니다 */
+        }
+
+        .dropdown {
+            margin-right: 500px;
+            
+        }
+        .dropdown2 {
+            margin-right: 500px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .na {
+            margin-left: 200px;
+        }
+
+        .input1 {
+            margin-right: 200px;
+        }
+
+        img {
+            width: 200px;
+            background-color: white;
+            border-radius: 10px;
+            height: 100px;
+            position: fixed; /* 이미지의 위치를 고정시킴 */
+            left: 45%; /* 화면 왼쪽에서 50% 떨어진 위치에 정렬 */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            margin: 650px;
+            background-color: white;
+            border: none;
+            color: #004D00;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #003300;
+            color: white;
+        }
+
+        .dropdown-container {
+            text-align: left;
+        }
+
+        .image-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .rectangle-image {
+            width: 100%;
+            height: 70px;
+            max-width: 100%;
+            /* 이미지가 화면 크기를 초과하지 않도록 제한합니다 */
+            background-color: white;
+            display: block;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h3>시스템경영공학과 학생회 원스미</h3>
+    <h1>GPT가 알려주는 학과 소개</h1>
+    <p>입력 데이터를 토대로 자신에게 맞는 학과와 간단한 학과 정보를 GPT가 소개해줍니다.</p>
+    <form action="/" method="post">
+        <div class="dropdown-container">
+            <span class="dropdown-label1">인터스텔라와 같이 물리적인 이론이 나오는 영화를 즐기시나요?</span>
+            <span class="dropdown">
+                <select name="physics">
+                    <option value="1">1 (매우 아니다)</option>
+                    <option value="2">2 (아니다)</option>
+                    <option value="3">3 (보통)</option>
+                    <option value="4">4 (그렇다)</option>
+                    <option value="5">5 (매우 그렇다)</option>
+                </select>
+            </span>
+        </div>
+
+
+        <div class="dropdown-container">
+            <span class="dropdown-label1">‘인공지능, AI’ 관련 용어에 관심을 가지고 있나요? </span>
+            <span class="dropdown">
+                <select name="code">
+                    <option value="1">1 (매우 아니다)</option>
+                    <option value="2">2 (아니다)</option>
+                    <option value="3">3 (보통)</option>
+                    <option value="4">4 (그렇다)</option>
+                    <option value="5">5 (매우 그렇다)</option>
+                </select>
+            </span>
+        </div>
+
+
+        <div class="dropdown-container">
+            <span class="dropdown-label1">다양한 사람들과 팀플을 하며 문제를 해결하는 것을 좋아하나요?</span>
+            <span class="dropdown">
+                <select name="team">
+                    <option value="1">1 (매우 아니다)</option>
+                    <option value="2">2 (아니다)</option>
+                    <option value="3">3 (보통)</option>
+                    <option value="4">4 (그렇다)</option>
+                    <option value="5">5 (매우 그렇다)</option>
+                </select>
+            </span>
+
+        </div>
+        <div class="dropdown-container">
+            <span class="dropdown-label1">대중교통을 이용할 때, 최적의 교통편을 타려고 노력하나요?</span>
+            <span class="dropdown">
+                <select name="optimization">
+                    <option value="1">1 (매우 아니다)</option>
+                    <option value="2">2 (아니다)</option>
+                    <option value="3">3 (보통)</option>
+                    <option value="4">4 (그렇다)</option>
+                    <option value="5">5 (매우 그렇다)</option>
+                </select>
+            </span>
+        </div>
+
+
+        <p1>🎁 추첨을 통해 참여인원 10분에게 스타벅스 음료 쿠폰을 제공하려고 합니다😀 응모를 희망하시면 인적사항을 기입해주세요 🎁 </p1>
+        <p1>💚 자신에게 맞는 학과로 "시스템경영공학과"가 나온 분 중 5분에게 시스템경영공학과 무선충전기를 드립니다 💚</p1>
+        <div class="dropdown-container">
+            <span class="dropdown-label2">이름:</span>
+            <span class="dropdown2">
+                <input type="text" class="search-box" name="username" />
+            </span>
+        </div>
+
+        <div class="dropdown-container">
+            <span class="dropdown-label1">핸드폰번호:</span>
+            <span class="dropdown">
+                <input type="text" class="search-box" name="phonenumber" />
+            </span>
+        </div>
+
+
+        <button type="submit">Enter</button>
+    </form>
+    <!-- 학과 로고 이미지 삽입 위치 -->
+    <div class="image-container">
+        <div class="rectangle-image">
+            <img src="{{ url_for('static', filename='SME.png') }}">
+        </div>
+    </div>
+
+</body>
+
+</html>
